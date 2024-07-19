@@ -27,7 +27,11 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 						className='rounded-full object-contain'
 					/>
 					<div className='flex flex-col'>
-						<h3 className='font-satoshi font-semibold text-gray-900'>{post.creator.username}</h3>
+						<a
+							href={`http://localhost:3000/profile/${post.creator._id}?name=${post.creator.username}`}
+							className='font-satoshi font-semibold text-gray-900'>
+							{post.creator.username}
+						</a>
 						<p className='font-inter text-sm text-gray-500'>{post.creator.email}</p>
 					</div>
 					<div className='copy_btn' onClick={handleCopy}>
