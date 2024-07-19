@@ -8,6 +8,9 @@ const nextConfig = {
 				pathname: '**',
 			},
 		],
+		experimental: {
+			appDir: true,
+		},
 	},
 	webpack(config) {
 		config.experiments = {
