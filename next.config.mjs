@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	experimental: {
+		appDir: true,
+	},
 	images: {
 		remotePatterns: [
 			{
@@ -8,9 +11,6 @@ const nextConfig = {
 				pathname: '**',
 			},
 		],
-		experimental: {
-			appDir: true,
-		},
 	},
 	webpack(config) {
 		config.experiments = {
